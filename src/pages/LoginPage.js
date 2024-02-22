@@ -1,6 +1,5 @@
 const { Link, Navigate } = require("react-router-dom");
 const { useState } =  require('react');
-const baseUrl = require( '../baseUrl.js');
 
 
 const axios = require('axios')

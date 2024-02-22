@@ -1,14 +1,13 @@
 import Header from "./components/Header";
 import TrialPage from "./pages/TrialPage";
 import LoginPage from "./pages/LoginPage.js";
-import baseUrl from './baseUrl.js';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import axios from "axios";
 
 
 
 
-axios.defaults.baseURL = "http://localhost:3000";
+axios.defaults.baseURL = "https://deployment-testing-backend.onrender.com:3000";
 
 
 function App() {
