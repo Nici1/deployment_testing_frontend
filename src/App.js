@@ -7,7 +7,7 @@ import axios from "axios";
 
 
 
-axios.defaults.baseURL = "https://deployment-testing-backend.onrender.com:3000";
+axios.defaults.baseURL = "https://deployment-testing-backend.onrender.com";
 
 
 function App() {
