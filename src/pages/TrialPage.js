@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useHistory } from 'react-router-dom'; // Import useHistory hook for navigation
+import { Link } from 'react-router-dom'; // Import Link component for navigation
 import baseUrl from '../baseUrl.js';
 
 function TrialPage() {
   const [response, setResponse] = useState('');
-  const history = useHistory(); // Initialize useHistory hook
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,20 +21,16 @@ function TrialPage() {
     fetchData();
   }, []);
 
-  const navigateToAnotherPage = () => {
-    // Navigate to another page when the button is clicked
-    history.push('/login'); // Specify the path of the target page
-  };
-
   return (
     <div>
       <p>Response from server: {response}</p>
       
-      {/* Button to navigate to another page */}
-      <button onClick={navigateToAnotherPage}>Go to Another Page</button>
+      {/* Link to navigate to the /login page */}
+      <Link to="/login">Go to Login Page</Link>
     </div>
   );
 }
 
 export default TrialPage;
+
 
