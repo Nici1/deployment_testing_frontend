@@ -32,12 +32,12 @@ function LoginPage() {
 
   async function login() {
   try {
-    const response_landlord = await axios.post(`/Landlord`, login_info, {withCredentials: true});
+    const response_landlord = await axios.post(`/login/Landlord`, login_info, {withCredentials: true});
     if(response_landlord.data === 'No email found'){
-      const response_spec = await axios.post(`/Spectator`, login_info, {withCredentials: true});
+      const response_spec = await axios.post(`/login/Spectator`, login_info, {withCredentials: true});
 
       if(response_spec.data === 'No email found'){
-        const response_per = await axios.post(`/Performer`, login_info, {withCredentials: true});
+        const response_per = await axios.post(`/login/Performer`, login_info, {withCredentials: true});
         if(response_per.data === 'No email found'){
     }
     else{
